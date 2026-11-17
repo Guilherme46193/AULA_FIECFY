@@ -15,12 +15,12 @@ import { useState } from "react"
               </p>
            
 
-            <button className="w-12 h-12 bg-green-500 rounded-full hover:bg-green-600 hover:scale-105 transition-transform">
+            <button className="w-12 h-12 bg-blue-500 rounded-full hover:bg-blue-600 hover:scale-105 transition-transform">
                 <span className=" text-white font-bold">▶︎</span>
             </button>
 
             <button onClick={()=> Setiscurtiu(!iscurtiu)}
-                className="w-12 h-12 bg-green-500 rounded-full hover:bg-green-600 hover:scale-105 transition-transform flex mt-3 text-center justify-center items-center">
+                className="w-12 h-12 bg-blue-500 rounded-full hover:bg-blue-600 hover:scale-105 transition-transform flex mt-3 text-center justify-center items-center">
                     {iscurtiu ? "❤︎" : "♡︎"}
             </button>
 
