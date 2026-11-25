@@ -1,20 +1,18 @@
 import { useState } from 'react';
-import Toast from '../components/Toast';
 import fundoTravis from '../assets/fundotravis.png';
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { FaSpotify } from 'react-icons/fa';
 
 function Login({ onLogin }) {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [mostrarSenha, setMostrarSenha] = useState(false);
-  const [toast, setToast] = useState(null);
   
 
   function handleSubmit(event) {
     event.preventDefault();
 
     if (!email.trim() || !senha.trim()) {
-      setToast({ message: 'Preencha seu e-mail e sua senha.', type: 'error' });
       return;
     }
 
@@ -23,7 +21,6 @@ function Login({ onLogin }) {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black px-4 py-10 text-white">
-      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
       <img
         src={fundoTravis}
         alt=""
@@ -33,7 +30,7 @@ function Login({ onLogin }) {
       <div className="absolute inset-0 bg-black/65" aria-hidden="true" />
       <section className="relative z-10 w-full max-w-md rounded-2xl border border-white/10 bg-zinc-900/90 p-8 shadow-2xl backdrop-blur-sm sm:p-10">
         <a href="/" className="mb-10 inline-flex items-center gap-2 text-2xl font-bold tracking-tight">
-          <span className="text-3xl text-blue-500">♫</span> fiecfy
+          <FaSpotify className="text-3xl text-blue-500" aria-hidden="true" /> fiecfy
         </a>
         <h1 className="text-3xl font-bold">Bem-vindo de volta</h1>
         <p className="mt-2 text-sm text-zinc-400">Entre na sua conta e curta suas músicas.</p>
@@ -61,7 +58,7 @@ function Login({ onLogin }) {
           <button type="submit" className="w-full rounded-full bg-blue-500 py-3 font-bold text-black transition hover:scale-[1.02] hover:bg-blue-500">Entrar</button>
         </form>
 
-        <p className="mt-8 text-center text-sm text-zinc-400">Ainda não tem conta? <button type="button" onClick={() => setToast({ message: 'Cadastro estará disponível em breve.', type: 'success' })} className="font-semibold text-white underline underline-offset-4 hover:text-blue-400">Inscreva-se</button></p>
+        <p className="mt-8 text-center text-sm text-zinc-400">Ainda não tem conta? <button type="button" className="font-semibold text-white underline underline-offset-4 hover:text-blue-400">Inscreva-se</button></p>
       </section>
     </main>
   );
