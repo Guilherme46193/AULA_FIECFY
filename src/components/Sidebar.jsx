@@ -10,7 +10,7 @@ function SearchIcon() {
 }
 
 function LibraryIcon() {
-  return <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-none stroke-current stroke-[2]"><path d="M4 4v16M9 4v16M14 4v16M19 4v16" /></svg>;
+  return <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-none stroke-current stroke-2"><path d="M4 4v16M9 4v16M14 4v16M19 4v16" /></svg>;
 }
 
 function Sidebar() {

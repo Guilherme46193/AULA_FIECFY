@@ -11,7 +11,7 @@ function Header() {
 
       <div className="flex gap-4 items-center">
         <button className='text-zinc-400 font-bold hover:text-white hover:scale-105 transition-all'>Inscrever-se</button>
-        <button className='bg-white text-black font-bold px-6 py-2 rounded-full hover:scale-105 transition-transform hover:bg-green-500'>Entrar</button>
+        <button className='bg-white text-black font-bold px-6 py-2 rounded-full hover:scale-105 transition-transform hover:bg-blue-500'>Entrar</button>
       </div>
     </header>
   )
